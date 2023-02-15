@@ -2,18 +2,18 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Alequez97",
   "classifications": [
-    "Web",
-    "SPA"
+    "Worker",
+    "TelegramBot"
   ],
-  "identity": "Alequez97Template.AspReactTypescriptVite",
-  "name": "ASP.NET Core with React and Vite",
-  "defaultName": "AspReactTypescriptViteWebApp",
-  "shortName": "react-vite",
+  "identity": "Alequez97Template.TelegramBot",
+  "name": "Telegram bot worker service",
+  "defaultName": "TelegramBot",
+  "shortName": "telegram-bot",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "dotnet_react_typescript_vite",
+  "sourceName": "telegram_bot",
   "preferNameDirectory": true,
   "sources": [
     {
