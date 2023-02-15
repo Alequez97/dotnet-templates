@@ -1,14 +1,14 @@
 ﻿#!/bin/bash
 
-sudo systemctl stop TelegramBot
+sudo systemctl stop TelegramBotTemplate
 
 git pull
-rm -rf /srv/TelegramBot
-mkdir /srv/TelegramBot
-chown root /srv/TelegramBot
+rm -rf /srv/TelegramBotTemplate
+mkdir /srv/TelegramBotTemplate
+chown root /srv/TelegramBotTemplate
 cd ..
-dotnet publish -c Release -o /srv/TelegramBot
+dotnet publish -c Release -o /srv/TelegramBotTemplate
 
-sudo cp TelegramBot.service /etc/systemd/system/TelegramBot.service
+sudo cp TelegramBotTemplate.service /etc/systemd/system/TelegramBotTemplate.service
 sudo systemctl daemon-reload
-echo "run sudo systemctl start TelegramBot to start service"
+echo "run sudo systemctl start TelegramBotTemplate to start service"

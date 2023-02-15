@@ -1,4 +1,4 @@
-﻿namespace TelegramBot.Services;
+﻿namespace TelegramBotTemplate.Services;
 
 public class TelegramUpdateExecutor
 {

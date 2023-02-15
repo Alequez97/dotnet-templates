@@ -1,8 +1,8 @@
-﻿using TelegramBot.Commands;
-using TelegramBot.Interfaces;
-using TelegramBot.Services;
+﻿using TelegramBotTemplate.Commands;
+using TelegramBotTemplate.Interfaces;
+using TelegramBotTemplate.Services;
 
-namespace TelegramBot.Extensions;
+namespace TelegramBotTemplate.Extensions;
 
 public static class ServiceCollectionExtensions
 {

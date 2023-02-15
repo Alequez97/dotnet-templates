@@ -1,4 +1,4 @@
-﻿namespace TelegramBot.Interfaces;
+﻿namespace TelegramBotTemplate.Interfaces;
 
 public interface ITelegramCommand
 {

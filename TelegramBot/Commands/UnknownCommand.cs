@@ -1,6 +1,6 @@
-﻿using TelegramBot.Interfaces;
+﻿using TelegramBotTemplate.Interfaces;
 
-namespace TelegramBot.Commands;
+namespace TelegramBotTemplate.Commands;
 
 public class UnknownCommand : ITelegramCommand
 {
