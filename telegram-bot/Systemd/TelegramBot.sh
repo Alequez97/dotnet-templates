@@ -3,11 +3,11 @@
 sudo systemctl stop TelegramBot
 
 git pull
-rm -rf /srv/TelegramBot.TelegramBot
-mkdir /srv/TelegramBot.TelegramBot
-chown root /srv/TelegramBot.TelegramBot
+rm -rf /srv/TelegramBot
+mkdir /srv/TelegramBot
+chown root /srv/TelegramBot
 cd ..
-dotnet publish -c Release -o /srv/TelegramBot.TelegramBot
+dotnet publish -c Release -o /srv/TelegramBot
 
 sudo cp TelegramBot.service /etc/systemd/system/TelegramBot.service
 sudo systemctl daemon-reload
