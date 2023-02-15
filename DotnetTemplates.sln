@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet_react_typescript_vite", "dotnet-react-typescript-vite\dotnet_react_typescript_vite.csproj", "{04E079F0-7A92-4B91-BFBD-E7453503051F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetReactTypescriptVite", "dotnet-react-typescript-vite\DotnetReactTypescriptVite.csproj", "{04E079F0-7A92-4B91-BFBD-E7453503051F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "telegram-bot", "telegram-bot\telegram-bot.csproj", "{5C5F35A9-A312-4538-AE06-66696D5EB03B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "telegram-bot\TelegramBot.csproj", "{5C5F35A9-A312-4538-AE06-66696D5EB03B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

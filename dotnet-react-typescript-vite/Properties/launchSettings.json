@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "dotnet_react_typescript_vite": {
+    "DotnetReactTypescriptVite": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7223;http://localhost:5223",

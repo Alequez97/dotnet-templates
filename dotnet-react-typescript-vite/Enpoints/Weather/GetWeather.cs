@@ -1,9 +1,9 @@
 ﻿using Ardalis.ApiEndpoints;
-using dotnet_react_typescript_vite.Constants;
+using DotnetReactTypescriptVite.Constants;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace dotnet_react_typescript_vite.Weather.Endpoints;
+namespace DotnetReactTypescriptVite.Weather.Endpoints;
 
 public class GetWeather : EndpointBaseAsync
     .WithoutRequest

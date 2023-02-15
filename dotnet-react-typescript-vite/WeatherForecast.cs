@@ -1,4 +1,4 @@
-namespace dotnet_react_typescript_vite
+namespace DotnetReactTypescriptVite
 {
     public class WeatherForecast
     {

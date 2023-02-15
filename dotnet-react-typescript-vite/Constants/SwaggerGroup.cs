@@ -1,4 +1,4 @@
-﻿namespace dotnet_react_typescript_vite.Constants;
+﻿namespace DotnetReactTypescriptVite.Constants;
 
 public static class SwaggerGroup
 {
