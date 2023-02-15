@@ -3,17 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetReactTypescriptVite", "DotnetReactTypescriptVite\DotnetReactTypescriptVite.csproj", "{90DB9B47-7294-4D06-A991-6988E9CA3871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetReactTypescriptVite", "DotnetReactTypescriptVite\DotnetReactTypescriptVite.csproj", "{90DB9B47-7294-4D06-A991-6988E9CA3871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{F26D7EC8-13F9-4CEF-AE62-122356198130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBotTemplate", "TelegramBot\TelegramBotTemplate.csproj", "{F26D7EC8-13F9-4CEF-AE62-122356198130}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{90DB9B47-7294-4D06-A991-6988E9CA3871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +21,11 @@ Global
 		{F26D7EC8-13F9-4CEF-AE62-122356198130}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26D7EC8-13F9-4CEF-AE62-122356198130}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F26D7EC8-13F9-4CEF-AE62-122356198130}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E21D6D00-E021-4BC9-A51F-C27124D39253}
 	EndGlobalSection
 EndGlobal
