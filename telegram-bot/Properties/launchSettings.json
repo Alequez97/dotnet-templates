@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "telegram_bot": {
+    "TelegramBot": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "environmentVariables": {

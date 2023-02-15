@@ -1,4 +1,4 @@
-﻿namespace telegram_bot.Constants;
+﻿namespace TelegramBot.Constants;
 
 public static class CommandConstants
 {

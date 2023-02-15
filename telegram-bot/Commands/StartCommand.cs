@@ -1,7 +1,7 @@
-﻿using telegram_bot.Constants;
-using telegram_bot.Interfaces;
+﻿using TelegramBot.Constants;
+using TelegramBot.Interfaces;
 
-namespace telegram_bot.Commands;
+namespace TelegramBot.Commands;
 
 public class StartCommand : ITelegramCommand
 {

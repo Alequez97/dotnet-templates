@@ -1,6 +1,6 @@
-using telegram_bot.Services;
+using TelegramBot.Services;
 
-namespace telegram_bot.Workers;
+namespace TelegramBot.Workers;
 
 public class TelegramBot : BackgroundService
 {

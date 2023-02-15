@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Text.RegularExpressions;
 
-namespace telegram_bot.Services;
+namespace TelegramBot.Services;
 
 public class EmojiProvider
 {

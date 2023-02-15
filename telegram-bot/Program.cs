@@ -1,5 +1,5 @@
-using telegram_bot.Extensions;
-using telegram_bot.Workers;
+using TelegramBot.Extensions;
+using TelegramBot.Workers;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
