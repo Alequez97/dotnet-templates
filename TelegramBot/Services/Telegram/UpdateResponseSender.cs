@@ -1,4 +1,4 @@
-﻿namespace TelegramBot.Services.Telegram;
+﻿namespace TelegramBotTemplate.Services.Telegram;
 
 public class UpdateResponseSender
 {

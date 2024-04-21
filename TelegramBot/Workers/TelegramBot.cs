@@ -1,4 +1,4 @@
-using TelegramBot.Services.Telegram;
+using TelegramBotTemplate.Services.Telegram;
 
 namespace TelegramBotTemplate.Workers;
 

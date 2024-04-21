@@ -1,5 +1,5 @@
-﻿using TelegramBot.Services.Common;
-using TelegramBot.Services.Telegram;
+﻿using TelegramBotTemplate.Services.Common;
+using TelegramBotTemplate.Services.Telegram;
 
 using TelegramBotTemplate.Commands;
 using TelegramBotTemplate.Interfaces;

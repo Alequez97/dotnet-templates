@@ -1,7 +1,7 @@
 ﻿using TelegramBotTemplate.Commands;
 using TelegramBotTemplate.Interfaces;
 
-namespace TelegramBot.Services.Telegram;
+namespace TelegramBotTemplate.Services.Telegram;
 
 public class CommandResolver
 {
