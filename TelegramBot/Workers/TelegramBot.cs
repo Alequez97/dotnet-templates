@@ -1,4 +1,4 @@
-using TelegramBotTemplate.Services;
+using TelegramBot.Services.Telegram;
 
 namespace TelegramBotTemplate.Workers;
 
@@ -50,9 +50,9 @@ public class TelegramBot : BackgroundService
         CancellationToken cancellationToken)
     {
         using IServiceScope scope = _serviceProvider.CreateScope();
-        var telegramUpdateExecutor = scope.ServiceProvider.GetRequiredService<TelegramUpdateExecutor>();
+        var telegramUpdateExecutor = scope.ServiceProvider.GetRequiredService<UpdateResponseSender>();
 
-        await telegramUpdateExecutor.ExecuteAsync(update);
+        await telegramUpdateExecutor.SendResponse(update);
     }
 
     private Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception,

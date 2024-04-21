@@ -1,6 +1,8 @@
-﻿using TelegramBotTemplate.Commands;
+﻿using TelegramBot.Services.Common;
+using TelegramBot.Services.Telegram;
+
+using TelegramBotTemplate.Commands;
 using TelegramBotTemplate.Interfaces;
-using TelegramBotTemplate.Services;
 
 namespace TelegramBotTemplate.Extensions;
 
@@ -13,8 +15,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<ITelegramCommand, StartCommand>();
 
         // Command services
-        services.AddScoped<TelegramCommandResolver>();
-        services.AddScoped<TelegramUpdateExecutor>();
+        services.AddScoped<CommandResolver>();
+        services.AddScoped<UpdateResponseSender>();
 
         // Common telegram helper services
         services.AddSingleton<EmojiProvider>();
