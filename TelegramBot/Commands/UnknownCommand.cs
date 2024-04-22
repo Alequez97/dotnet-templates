@@ -11,7 +11,7 @@ public class UnknownCommand : ITelegramCommand
         _telegramBotClient = telegramBotClient;
     }
 
-    public async Task SendResponseAsync(Update update)
+    public async Task SendResponseAsync(Update update, CancellationToken cancellationToken)
     {
         var chatId = update?.Message?.Chat?.Id;
 
@@ -20,13 +20,14 @@ public class UnknownCommand : ITelegramCommand
             await _telegramBotClient.SendTextMessageAsync(
                 chatId,
                 $"Unknown command was sent",
-                ParseMode.MarkdownV2
+                ParseMode.MarkdownV2,
+                cancellationToken: cancellationToken
             );
         }
     }
 
-    public bool IsResponsibleForUpdate(Update update)
+    public Task<bool> IsResponsibleForUpdateAsync(Update update, CancellationToken _)
     {
-        return false;
+        return Task.FromResult(false);
     }
 }

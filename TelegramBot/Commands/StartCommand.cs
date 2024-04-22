@@ -6,32 +6,26 @@ namespace TelegramBotTemplate.Commands;
 public class StartCommand : ITelegramCommand
 {
     private readonly ITelegramBotClient _telegramBotClient;
-    private readonly ILogger<StartCommand> _logger;
-    private readonly IConfiguration _configuration;
 
-    public StartCommand(
-        ITelegramBotClient telegramBotClient,
-        ILogger<StartCommand> logger,
-        IConfiguration configuration)
+    public StartCommand(ITelegramBotClient telegramBotClient)
     {
         _telegramBotClient = telegramBotClient;
-        _logger = logger;
-        _configuration = configuration;
     }
 
-    public async Task SendResponseAsync(Update update)
+    public async Task SendResponseAsync(Update update, CancellationToken cancellationToken)
     {
         var chatId = update.Message.Chat.Id;
 
         await _telegramBotClient.SendTextMessageAsync(
             chatId,
             $"Welcome to our telegram bot",
-            ParseMode.MarkdownV2
+            ParseMode.MarkdownV2,
+            cancellationToken: cancellationToken
         );
     }
 
-    public bool IsResponsibleForUpdate(Update update)
+    public Task<bool> IsResponsibleForUpdateAsync(Update update, CancellationToken _)
     {
-        return update.Message?.Text?.Contains(CommandConstants.Start) ?? false;
+        return Task.FromResult(update.Message?.Text?.Contains(CommandConstants.Start) ?? false);
     }
 }

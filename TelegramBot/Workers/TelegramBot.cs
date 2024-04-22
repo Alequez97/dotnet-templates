@@ -56,7 +56,7 @@ public class TelegramBot : BackgroundService
                 using IServiceScope scope = _serviceProvider.CreateScope();
                 var telegramResponseSender = scope.ServiceProvider.GetRequiredService<UpdateResponseSender>();
 
-                await telegramResponseSender.SendResponse(update);
+                await telegramResponseSender.SendResponseAsync(update, cancellationToken);
             }
             catch (Exception exception)
             {

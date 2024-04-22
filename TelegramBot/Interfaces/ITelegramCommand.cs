@@ -2,7 +2,7 @@
 
 public interface ITelegramCommand
 {
-    Task SendResponseAsync(Update update);
+    Task SendResponseAsync(Update update, CancellationToken cancellationToken);
 
-    bool IsResponsibleForUpdate(Update update);
+    Task<bool> IsResponsibleForUpdateAsync(Update update, CancellationToken cancellationToken);
 }

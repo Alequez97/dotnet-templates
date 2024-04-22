@@ -9,10 +9,10 @@ public class UpdateResponseSender
         _commandResolver = commandResolver;
     }
 
-    public async Task SendResponse(Update update)
+    public async Task SendResponseAsync(Update update, CancellationToken cancellationToken)
     {
-        var command = _commandResolver.Resolve(update);
+        var command = await _commandResolver.ResolveAsync(update, cancellationToken);
 
-        await command.SendResponseAsync(update);
+        await command.SendResponseAsync(update, cancellationToken);
     }
 }

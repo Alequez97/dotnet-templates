@@ -1,4 +1,5 @@
 ﻿using TelegramBotTemplate.Commands;
+using TelegramBotTemplate.Exceptions;
 using TelegramBotTemplate.Interfaces;
 
 namespace TelegramBotTemplate.Services.Telegram;
@@ -14,15 +15,29 @@ public class CommandResolver
         _unknownCommand = unknownCommand;
     }
 
-    public ITelegramCommand Resolve(Update update)
+    public async Task<ITelegramCommand> ResolveAsync(Update update, CancellationToken cancellationToken)
     {
-        var command = _commands.FirstOrDefault(command => command.IsResponsibleForUpdate(update));
+        var responsibleForUpdateCommands = new List<ITelegramCommand>();
 
-        if (command == null)
+        foreach (var command in _commands)
+        {
+            if (await command.IsResponsibleForUpdateAsync(update, cancellationToken))
+            {
+                responsibleForUpdateCommands.Add(command);
+            }
+        }
+
+        if (responsibleForUpdateCommands.Count > 1)
+        {
+            var responsibleForUpdateTypesAsString = string.Join(", ", responsibleForUpdateCommands.Select(command => command.GetType().Name));
+            throw new MoreThanOneCommandIsResponsibleForUpdateException($"More than one command found as responsible for incoming update. List of commands that match same update: {responsibleForUpdateTypesAsString}");
+        }
+
+        if (responsibleForUpdateCommands.Count == 0)
         {
             return _unknownCommand;
         }
 
-        return command;
+        return responsibleForUpdateCommands.First();
     }
 }
